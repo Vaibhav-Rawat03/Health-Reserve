@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({ limit: '15mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 app.use(cors({
-    origin: 'https://caredocs-z1ob.onrender.com:5173', // Allow requests from this origin
+    origin: 'https://health-reserve.vercel.app', // Allow requests from this origin
     credentials: true // Enable credentials (cookies, authorization headers) cross-origin
 }));
 
