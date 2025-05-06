@@ -36,7 +36,7 @@ const Card = ({ item, onDelete }) => {
 
     const handleDelete = async () => {
         try {
-            const response = await axios.delete(`http://localhost:3000/record/${item._id}`);
+            const response = await axios.delete(`https://caredocs-z1ob.onrender.com/record/${item._id}`);
             onDelete(item._id); // Update state to remove the deleted item from the UI
             alert('Record deleted successfully');
         } catch (error) {

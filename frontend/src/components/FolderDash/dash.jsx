@@ -10,7 +10,7 @@ const Dash = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/getdata", {
+                const response = await axios.get("https://caredocs-z1ob.onrender.com/getdata", {
                     withCredentials: true, // Ensure cookies are sent
                 });
                 setUser(response.data);
@@ -33,7 +33,7 @@ const Dash = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:3000/grant-access", {
+            const response = await axios.post("https://caredocs-z1ob.onrender.com/grant-access", {
                 selectedDoctor
             }, {
                 withCredentials: true, // Ensure cookies are sent
@@ -60,7 +60,7 @@ const Dash = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:3000/revoke-access", {
+            const response = await axios.post("https://caredocs-z1ob.onrender.com/revoke-access", {
                 revokeDoctor
             }, {
                 withCredentials: true, // Ensure cookies are sent
